@@ -382,7 +382,7 @@ ul, ol {
 }
 
 .navbar {
-    position: relative;
+    position: absolute;
     padding: 40px 0;
     width: 100%;
     z-index: 10000;
@@ -454,7 +454,7 @@ a {
 /* Start Hero */
 #hero {
     position: relative;
-    height: 90vh;
+    height: 110vh;
     padding-bottom: 0!important;
 }
 
@@ -732,7 +732,90 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  height: 90vh;
+  height: 100vh;
   padding-bottom: 0!important;
+  background-color: #fcdccc;
+}
+
+#hero-config .hero-wave-top {
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+}
+
+#configurator {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+}
+
+#configurator .konfigurator-tabs {
+  width: 100%;
+  height: fit-content;
+  padding: 0px 30px;
+  border-radius: 50px;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#configurator .konfigurator-tab {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+}
+
+#configurator .konfigurator-tab.active {
+  background-color: var(--accent);
+  border-radius: 50px;
+  padding: 10px 50px;
+}
+
+#configurator .konfigurator-fruechte-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (max-width: 991px) {
+ #configurator .konfigurator-fruechte-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  } 
+}
+
+@media (max-width: 767px) {
+ #configurator .konfigurator-fruechte-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  } 
+}
+
+@media (max-width: 576px) {
+ #configurator .konfigurator-fruechte-wrapper {
+    grid-template-columns: auto;
+  } 
+}
+
+#configurator .konfigurator-fruechte-card {
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  background-color: var(--primary);
+  border-radius: 90px;
+}
+
+#configurator .konfigurator-panel {
+    display: none;
+}
+
+#configurator .konfigurator-panel.active {
+    display: block; /* or flex/grid, whatever you're using for the wrapper */
 }
 /* End Konfigurator */
