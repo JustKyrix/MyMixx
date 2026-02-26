@@ -2,6 +2,7 @@
   --primary:   #6FDCEB;
   --secondary: #e8cbad;
   --accent:    #FEDF17;
+  --bg-section: #eab6b6;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -18,7 +19,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   font-family: 'Londrina', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   background-color: var(--secondary);
 }
 
@@ -26,7 +27,7 @@ section {
     padding: 100px 0;
 }
 
-h1, .h1 { font-size: clamp(2.5rem,  0.875rem + 8.125vw, 6rem);     margin-top: 0; margin-bottom: 0.5rem; word-break: break-word; line-height: 1; }
+h1, .h1 { font-size: clamp(2.5rem,  0.875rem + 8.125vw, 6rem);     margin-top: 0; margin-bottom: 0.5rem; word-break: break-word; line-height: 1.1; }
 h2, .h2 { font-size: clamp(2rem,    0.875rem + 6.125vw, 3.75rem);   margin-top: 0; margin-bottom: 0.5rem; }
 h3, .h3 { font-size: clamp(1.75rem, 0.875rem + 4.375vw, 2.75rem);   margin-top: 0; margin-bottom: 0.5rem; }
 h4, .h4 { font-size: clamp(1.5rem,  0.875rem + 3vw,     2.125rem);  margin-top: 0; margin-bottom: 0.5rem; }
@@ -164,11 +165,22 @@ h6, .h6 { font-size: clamp(1rem,    0.775rem + 1.125vw, 1.25rem);   margin-top: 
 .gap-0  { gap: 0;      }
 .gap-1  { gap: 0.25rem; }
 .gap-2  { gap: 0.5rem;  }
+.gap-25 { gap: 0.65rem; }
 .gap-3  { gap: 0.75rem; }
 .gap-4  { gap: 1rem;    }
 .gap-5  { gap: 1.5rem;  }
 .gap-6  { gap: 2rem;    }
 .gap-8  { gap: 3rem;    }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 0.75rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-5 { margin-top: 1.5rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-7 { margin-top: 2rem; }
+.mt-8 { margin-top: 3rem; }
 
 .h-25  { height: 25%;   }
 .h-50  { height: 50%;   }
@@ -308,6 +320,7 @@ ul, ol {
 }
 
 .primary-btn {
+    font-size: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -445,8 +458,13 @@ a {
     padding-bottom: 0!important;
 }
 
+#hero h1 {
+  margin: 0;
+}
+
 #hero p {
     width: 50%;
+    margin-top: 10px;
 }
 
 @media (max-width: 767px) {
@@ -463,6 +481,7 @@ a {
     width: 100px;
     height: 100px;
     object-fit: inherit;
+    margin-bottom: 10px;
 }
 
 #hero .bowl1 {
@@ -517,8 +536,29 @@ a {
 }
 
 #gesund p {
-  font-size: 20px;
   margin: 0;
+}
+
+#gesund .kreation {
+  border-left: 5px solid white;
+  padding-left: 1rem;
+  width: 30%;
+}
+
+#gesund .lecker {
+  width: fit-content;
+  background: cadetblue;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;  
+}
+
+#gesund .gesund-corn {
+  width: fit-content;
+  background: cadetblue;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;  
 }
 
 #gesund .hero-wave-bottom {
@@ -546,11 +586,6 @@ a {
     height: auto;
 }
 
-#gesund .gesund-configure {
-  border-left: 2px solid white;
-  padding-left: 30px;
-}
-
 @media (max-width: 575px) {
   #gesund .gesund-flake, #gesund .gesund-bowl-top {
     width: 60%;
@@ -563,7 +598,6 @@ a {
 
 /* Start Vielfalt */
 #vielfalt {
-  height: 100vh;
   position: relative;
   background-color: white;
 }
@@ -572,6 +606,8 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 
@@ -593,9 +629,9 @@ a {
 }
 
 #vielfalt .card {
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
+  width: 390px;
+  height: 390px;
+  border-radius: 100px;
   padding: 50px;
   background-color: var(--primary);
   position: relative;
@@ -608,9 +644,6 @@ a {
 }
 
 #vielfalt .card .card-description {
-  position: absolute;
-  bottom: -10%;
-  left: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -619,8 +652,8 @@ a {
   height: fit-content;
   padding: 20px 30px;
   background-color: #FEDF17;
-  border: 2px solid white;
   border-radius: 50px;
+  font-size: 30px;
 }
 
 #vielfalt .card .card-description p {
@@ -635,4 +668,60 @@ a {
   height: auto;
   object-fit: contain;
 }
+
+#vielfalt .vielfalt-flake {
+  position: absolute;
+  right: 150px;
+  top: -90px;
+}
 /* End Vielfalt */
+
+/* Start Frühstück */
+#fruehstueck {
+  position: relative;
+  background-color: var(--bg-section);
+}
+
+#fruehstueck .container {
+  margin-top: 400px;
+}
+
+#fruehstueck .fruehstueck-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#fruehstueck .fruehstueck-body {
+  position: relative;
+}
+
+#fruehstueck .fruehstueck-description {
+  width: 300px;
+  height: 300px;
+  padding: 50px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  transform: rotate(-20deg);
+}
+
+#fruehstueck p {
+  margin: 0;
+  font-size: 30px;
+}
+
+#fruehstueck .fruehstueck-flake {
+  position: absolute;
+  top: 26%;
+  right: 25%; 
+}
+
+#fruehstueck .vielfalt-bottom-wave {
+  position: absolute;
+  top: -8%;
+  left: 0;
+}
+/* End Frühstück */
