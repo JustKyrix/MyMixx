@@ -725,3 +725,14 @@ a {
   left: 0;
 }
 /* End Frühstück */
+
+/* Start Konfigurator */
+#hero-config {
+  background-image: url("../images/waves/hero-config.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 90vh;
+  padding-bottom: 0!important;
+}
+/* End Konfigurator */

@@ -16,8 +16,8 @@
             </button>
             <div class="navbar-collapse">
                 <ul class="navbar-nav d-flex justify-content-center align-items-center h-100">
-                    <li><a href="./Assets/html/configure.html" class="nav-link active">Produkt</a></li>
-                    <li><a href="#" class="nav-link">Uber Uns</a></li>
+                    <li><a href="../../index.html" class="nav-link">Starseite</a></li>
+                    <li><a href="./configure.html" class="nav-link active">Produkte</a></li>
                     <li><a href="#" class="nav-link">Stores</a></li>
                     <li><a href="#" class="nav-link">Nachhaltigkeit</a></li>
                     <li><a href="#" class="nav-link">Kontakt</a></li>
@@ -28,9 +28,157 @@
             </div>
         </div>
     </nav>
-    <section>
+    <section id="hero-config">
+        <div class="container d-flex flex-column gap-25 justify-content-center align-items-center h-75 text-center">
+            <a href="../../index.html"><img src="../images/logo/hero-logo.png" alt="Logo" class="logo"></a>
+            <h1 class="w-lg-75 w-100">JETZT EINMISCHEN</h1>
+            <p class="w-lg-25 w-100">UNSER KONFIGURATOR BIETET ÜBER 100 VERSCHIEDENE KOMBINATIONEN FÜR DEINE SELBSTKREIRTEN CORNFLAKES</p>
+        </div>
+        <img src="../images/waves/hero-wave-top.png" alt="Wave Top" class="hero-wave-top">
+    </section>
+    <section id="configurator">
         <div class="container">
+            <!-- TABS -->
+            <div class="konfigurator-tabs">
+            <button class="konfigurator-tab active" data-tab="cerealien">Cerealien</button>
+            <button class="konfigurator-tab" data-tab="fruechte">Getrocknete Früchte</button>
+            <button class="konfigurator-tab" data-tab="nuesse">Nüsse & Samen</button>
+            <button class="konfigurator-tab" data-tab="superfoods">Superfoods</button>
+            <button class="konfigurator-tab" data-tab="extras">Extras</button>
+            </div>
 
+            <!-- TAB PANELS -->
+            <div class="konfigurator-panel active" data-panel="cerealien">
+            <div class="konfigurator-cerealien-wrapper">
+
+                <div class="konfigurator-cerealien-card">
+                <div class="konfigurator-cerealien-header">
+                    <img class="konfigurator-cerealien-img" src="hafer.jpg" alt="Haferflocken">
+                </div>
+                <div class="konfigurator-cerealien-body">
+                    <div class="konfigurator-cerealien-controls">
+                    <button class="konfigurator-cerealien-minus"><i class="fa-solid fa-minus"></i></button>
+                    <span class="konfigurator-cerealien-price">€1.20</span>
+                    <button class="konfigurator-cerealien-plus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="konfigurator-cerealien-description">
+                    <span class="konfigurator-cerealien-name">Haferflocken</span>
+                    <span class="konfigurator-cerealien-weight">50g</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="konfigurator-cerealien-card">
+                <div class="konfigurator-cerealien-header">
+                    <img class="konfigurator-cerealien-img" src="dinkel.jpg" alt="Dinkelflocken">
+                </div>
+                <div class="konfigurator-cerealien-body">
+                    <div class="konfigurator-cerealien-controls">
+                    <button class="konfigurator-cerealien-minus"><i class="fa-solid fa-minus"></i></button>
+                    <span class="konfigurator-cerealien-price">€1.40</span>
+                    <button class="konfigurator-cerealien-plus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="konfigurator-cerealien-description">
+                    <span class="konfigurator-cerealien-name">Dinkelflocken</span>
+                    <span class="konfigurator-cerealien-weight">50g</span>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+            </div>
+
+            <div class="konfigurator-panel" data-panel="fruechte">
+            <div class="konfigurator-fruechte-wrapper">
+
+                <div class="konfigurator-fruechte-card">
+                <div class="konfigurator-fruechte-header">
+                    <img class="konfigurator-fruechte-img" src="rosinen.jpg" alt="Rosinen">
+                </div>
+                <div class="konfigurator-fruechte-body">
+                    <div class="konfigurator-fruechte-controls">
+                    <button class="konfigurator-fruechte-minus"><i class="fa-solid fa-minus"></i></button>
+                    <span class="konfigurator-fruechte-price">€0.90</span>
+                    <button class="konfigurator-fruechte-plus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="konfigurator-fruechte-description">
+                    <span class="konfigurator-fruechte-name">Rosinen</span>
+                    <span class="konfigurator-fruechte-weight">30g</span>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+            </div>
+
+            <div class="konfigurator-panel" data-panel="nuesse">
+            <div class="konfigurator-nuesse-wrapper">
+
+                <div class="konfigurator-nuesse-card">
+                <div class="konfigurator-nuesse-header">
+                    <img class="konfigurator-nuesse-img" src="mandeln.jpg" alt="Mandeln">
+                </div>
+                <div class="konfigurator-nuesse-body">
+                    <div class="konfigurator-nuesse-controls">
+                    <button class="konfigurator-nuesse-minus"><i class="fa-solid fa-minus"></i></button>
+                    <span class="konfigurator-nuesse-price">€1.60</span>
+                    <button class="konfigurator-nuesse-plus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="konfigurator-nuesse-description">
+                    <span class="konfigurator-nuesse-name">Mandeln</span>
+                    <span class="konfigurator-nuesse-weight">20g</span>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+            </div>
+
+            <div class="konfigurator-panel" data-panel="superfoods">
+            <div class="konfigurator-superfoods-wrapper">
+
+                <div class="konfigurator-superfoods-card">
+                <div class="konfigurator-superfoods-header">
+                    <img class="konfigurator-superfoods-img" src="chiasamen.jpg" alt="Chia Samen">
+                </div>
+                <div class="konfigurator-superfoods-body">
+                    <div class="konfigurator-superfoods-controls">
+                    <button class="konfigurator-superfoods-minus"><i class="fa-solid fa-minus"></i></button>
+                    <span class="konfigurator-superfoods-price">€2.00</span>
+                    <button class="konfigurator-superfoods-plus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="konfigurator-superfoods-description">
+                    <span class="konfigurator-superfoods-name">Chia Samen</span>
+                    <span class="konfigurator-superfoods-weight">15g</span>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+            </div>
+
+            <div class="konfigurator-panel" data-panel="extras">
+            <div class="konfigurator-extras-wrapper">
+
+                <div class="konfigurator-extras-card">
+                <div class="konfigurator-extras-header">
+                    <img class="konfigurator-extras-img" src="honig.jpg" alt="Honig">
+                </div>
+                <div class="konfigurator-extras-body">
+                    <div class="konfigurator-extras-controls">
+                    <button class="konfigurator-extras-minus"><i class="fa-solid fa-minus"></i></button>
+                    <span class="konfigurator-extras-price">€1.80</span>
+                    <button class="konfigurator-extras-plus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="konfigurator-extras-description">
+                    <span class="konfigurator-extras-name">Honig</span>
+                    <span class="konfigurator-extras-weight">10g</span>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+            </div>
         </div>
     </section>
     <script src="../scripts/scripts.js"></script>
