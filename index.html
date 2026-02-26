@@ -9,13 +9,13 @@
 </head>
 <body>
     <nav class="navbar" id="navbar">
-        <img src="./Assets/images/waves/nav-wave.png" alt="Navbar Wave" class="nav-wave">
-        <div class="container">
+        <img src="./Assets/images/waves/nav-wave.svg" alt="Navbar Wave" class="nav-wave">
+        <div class="nav-container">
             <button class="navbar-toggle" aria-label="Toggle navigation">
                 <span><i class="fa-solid fa-bars"></i></span>
             </button>
             <div class="navbar-collapse">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav d-flex justify-content-center align-items-center h-100">
                     <li><a href="#" class="nav-link active">Produkt</a></li>
                     <li><a href="#" class="nav-link">Uber Uns</a></li>
                     <li><a href="#" class="nav-link">Stores</a></li>
@@ -29,9 +29,9 @@
         </div>
     </nav>
     <section id="hero">
-        <div class="container d-flex flex-column gap-4 justify-content-center align-items-center h-100 text-center">
+        <div class="container d-flex flex-column gap-1 justify-content-center align-items-center h-75 text-center">
             <img src="./Assets/images/logo/hero-logo.png" alt="Logo" class="logo">
-            <h1>Selbstgemachte Cornflakes</h1>
+            <h1 class="w-lg-75 w-100">Selbstgemachte Cornflakes</h1>
             <p>Bei uns können Sie Ihre ganz individuelle Müslimischung aus hochwertigen, größtenteils biologisch angebauten und fair gehandelten Zutaten kreieren.</p>
             <a href="./configure" class="primary-btn">Konfiguieren</a>
         </div>
@@ -43,19 +43,46 @@
         <img src="./Assets/images/waves/hero-wave-bottom.png" alt="Wave Bottom" class="hero-wave-bottom">
         <img src="./Assets/images/cute-flakes/gesund-flake.png" alt="Gesund Flake" class="gesund-flake">
         <img src="./Assets/images/bowls/gesund-bowl.png" alt="Bowl Top" class="gesund-bowl-top">
-        <div class="container h-100 d-flex flex-column justify-content-end align-items-start">
-            <div class="header">
+        <div class="container h-85 d-flex flex-column justify-content-end align-items-start gap-5">
+            <div class="header w-lg-50 w-100 text-uppercase">
                 <p>Konfiguiere Deine</p>
                 <h2 class="h1">Leckeren & Gesunden Cornflakes</h2>
             </div>
-            <div class="gesund-configure">
+            <div class="gesund-configure text-uppercase d-flex flex-column gap-4">
                 <a href="./configure" class="primary-btn">Konfiguieren</a>
-                <p>Deine Eigene Kreation</p>
-                <p>Selbst Zusammengestellt aus wertvollen und</p>
-                <p>Nachhaltigen Produkten</p>
+                <p class="w-lg-50 w-100">Deine Eigene Kreation
+                   Selbst Zusammengestellt aus wertvollen und
+                   Nachhaltigen Produkten
+                </p>
             </div>
         </div>
         <img src="./Assets/images/waves/" alt="">
+    </section>
+    <section id="vielfalt">
+        <img src="./Assets/images/waves/vielfalt-top-wave.png" alt="Vielfalt Wave Top" class="vielfalt-wave-top">
+        <div class="container text-uppercase">
+            <h2 class="h1">Unsere Vielfalt</h2>
+            <div class="card-wrapper">
+                <div class="card">
+                    <img src="./Assets/images/früchte/card-frucht1.png" alt="Früchte" class="vielfalt-img">
+                    <div class="card-description">
+                        <p>Früchte</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./Assets/images/früchte/card-frucht2.png" alt="Superfoods" class="vielfalt-img"> 
+                    <div class="card-description">
+                        <p>Superfoods</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./Assets/images/früchte/card-frucht3.png" alt="Nüsse" class="vielfalt-img">
+                    <div class="card-description">
+                        <p>Nüsse</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <script src="./Assets/scripts/scripts.js"></script>
 </body> 

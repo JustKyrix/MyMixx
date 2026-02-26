@@ -7,8 +7,8 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 @font-face {
-  font-family: 'Koulen';
-  src: url('../fonts/Koulen-Regular.woff2') format('woff2');
+  font-family: 'Londrina';
+  src: url('../font/LondrinaSolid-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 body {
   overflow-x: hidden;
   margin: 0;
-  font-family: 'Koulen', sans-serif;
+  font-family: 'Londrina', sans-serif;
   font-size: 16px;
   background-color: var(--secondary);
 }
@@ -26,7 +26,7 @@ section {
     padding: 100px 0;
 }
 
-h1, .h1 { font-size: clamp(2.5rem,  0.875rem + 8.125vw, 5rem);     margin-top: 0; margin-bottom: 0.5rem; }
+h1, .h1 { font-size: clamp(2.5rem,  0.875rem + 8.125vw, 6rem);     margin-top: 0; margin-bottom: 0.5rem; word-break: break-word; line-height: 1; }
 h2, .h2 { font-size: clamp(2rem,    0.875rem + 6.125vw, 3.75rem);   margin-top: 0; margin-bottom: 0.5rem; }
 h3, .h3 { font-size: clamp(1.75rem, 0.875rem + 4.375vw, 2.75rem);   margin-top: 0; margin-bottom: 0.5rem; }
 h4, .h4 { font-size: clamp(1.5rem,  0.875rem + 3vw,     2.125rem);  margin-top: 0; margin-bottom: 0.5rem; }
@@ -36,7 +36,7 @@ h6, .h6 { font-size: clamp(1rem,    0.775rem + 1.125vw, 1.25rem);   margin-top: 
 .container {
   width: 100%;
   margin-inline: auto;
-  padding-inline: 1rem;
+  padding-inline: 1rem; 
 }
 
 @media (min-width: 576px)  { .container { max-width: 540px;  } }
@@ -47,6 +47,10 @@ h6, .h6 { font-size: clamp(1rem,    0.775rem + 1.125vw, 1.25rem);   margin-top: 
 
 .text-center {
     text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 .row {
@@ -169,6 +173,9 @@ h6, .h6 { font-size: clamp(1rem,    0.775rem + 1.125vw, 1.25rem);   margin-top: 
 .h-25  { height: 25%;   }
 .h-50  { height: 50%;   }
 .h-75  { height: 75%;   }
+.h-80 { height: 80%; }
+.h-85 { height: 85%; }
+.h-90 { height: 90%; }
 .h-100 { height: 100%;  }
 .h-auto { height: auto; }
 .h-screen { height: 100vh; }
@@ -179,6 +186,51 @@ h6, .h6 { font-size: clamp(1rem,    0.775rem + 1.125vw, 1.25rem);   margin-top: 
 .w-100 { width: 100%;  }
 .w-auto { width: auto; }
 .w-screen { width: 100vw; }
+
+@media (min-width: 576px) {
+  .w-sm-25     { width: 25%;   }
+  .w-sm-50     { width: 50%;   }
+  .w-sm-75     { width: 75%;   }
+  .w-sm-100    { width: 100%;  }
+  .w-sm-auto   { width: auto;  }
+  .w-sm-screen { width: 100vw; }
+}
+
+@media (min-width: 768px) {
+  .w-md-25     { width: 25%;   }
+  .w-md-50     { width: 50%;   }
+  .w-md-75     { width: 75%;   }
+  .w-md-100    { width: 100%;  }
+  .w-md-auto   { width: auto;  }
+  .w-md-screen { width: 100vw; }
+}
+
+@media (min-width: 992px) {
+  .w-lg-25     { width: 25%;   }
+  .w-lg-50     { width: 50%;   }
+  .w-lg-75     { width: 75%;   }
+  .w-lg-100    { width: 100%;  }
+  .w-lg-auto   { width: auto;  }
+  .w-lg-screen { width: 100vw; }
+}
+
+@media (min-width: 1200px) {
+  .w-xl-25     { width: 25%;   }
+  .w-xl-50     { width: 50%;   }
+  .w-xl-75     { width: 75%;   }
+  .w-xl-100    { width: 100%;  }
+  .w-xl-auto   { width: auto;  }
+  .w-xl-screen { width: 100vw; }
+}
+
+@media (min-width: 1400px) {
+  .w-xxl-25     { width: 25%;   }
+  .w-xxl-50     { width: 50%;   }
+  .w-xxl-75     { width: 75%;   }
+  .w-xxl-100    { width: 100%;  }
+  .w-xxl-auto   { width: auto;  }
+  .w-xxl-screen { width: 100vw; }
+}
 
 .order-1 { order: 1; }
 .order-2 { order: 2; }
@@ -263,7 +315,7 @@ ul, ol {
     height: fit-content;
     padding: 10px 30px;
     background-color: var(--accent);
-    border: 2px solid white;
+    border: 2px solid transparent;
     border-radius: 50px;
     transition: all .3s ease-in-out;
 }
@@ -307,14 +359,18 @@ ul, ol {
   list-style: none;
 }
 
+.nav-container {
+  margin-right: 40px;
+}
+
 .nav-bg {
-    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
+    height: 100vh;
 }
 
 .navbar {
     position: relative;
-    padding: 30px 0;
+    padding: 40px 0;
     width: 100%;
     z-index: 10000;
     opacity: 0;
@@ -348,6 +404,7 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
+    font-size: 20px;
 }
 
 @media (max-width: 991px) {
@@ -357,6 +414,7 @@ a {
 
   .navbar-collapse.open {
     display: block;
+    height: 70vh;
   }
 
   .navbar-collapse.open .navbar-nav {
@@ -383,12 +441,18 @@ a {
 /* Start Hero */
 #hero {
     position: relative;
-    height: 100vh;
+    height: 90vh;
     padding-bottom: 0!important;
 }
 
 #hero p {
     width: 50%;
+}
+
+@media (max-width: 767px) {
+  #hero p {
+    width: 100%;
+  }
 }
 
 #hero p, h1 {
@@ -398,23 +462,41 @@ a {
 #hero .logo {
     width: 100px;
     height: 100px;
-    object-fit: cover;
+    object-fit: inherit;
 }
 
 #hero .bowl1 {
     position: absolute;
     bottom: 200px;
-    left: 0;
+    left: -50px;
+    width: 30%;
+    height: auto;
     object-fit: contain;
     z-index: -1;
 }
+
+@media (max-width: 991px) {
+    #hero .bowl1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+      z-index: -1;
+      width: 40%;
+  }
+
+  #hero .bowl2 {
+    width: 100%;
+    height: auto;
+  }
+} 
 
 #hero .bowl2 {
     position: absolute;
     bottom: 0px;
     right: 0;
     object-fit: contain;
-    z-index: -1;
+    z-index: -2;
 }
 
 #hero .hero-wave-top {
@@ -434,6 +516,11 @@ a {
     height: 200vh;
 }
 
+#gesund p {
+  font-size: 20px;
+  margin: 0;
+}
+
 #gesund .hero-wave-bottom {
     position: absolute;
     top: -170px;
@@ -446,16 +533,106 @@ a {
     top: 0;
     right: 0;
     z-index: 1;
-    width: 50%;
+    width: 40%;
     height: 100%;
     object-fit: contain;
 }
 
 #gesund .gesund-flake {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 0;
-    width: 50%;
+    width: 40%;
     height: auto;
 }
+
+#gesund .gesund-configure {
+  border-left: 2px solid white;
+  padding-left: 30px;
+}
+
+@media (max-width: 575px) {
+  #gesund .gesund-flake, #gesund .gesund-bowl-top {
+    width: 60%;
+  }
+  #gesund {
+    height: 150vh;
+  }
+}
 /* End Lecker & Gesund */
+
+/* Start Vielfalt */
+#vielfalt {
+  height: 100vh;
+  position: relative;
+  background-color: white;
+}
+
+#vielfalt .card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 30px;
+}
+
+@media (max-width: 991px) {
+  #vielfalt .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  #vielfalt .card-wrapper {
+    grid-template-columns: auto;        
+    gap: 100px;
+  }
+  #vielfalt .card .card-description {
+    width: 200px!important;
+    left: 20%!important;
+  }
+}
+
+#vielfalt .card {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  padding: 50px;
+  background-color: var(--primary);
+  position: relative;
+}
+
+#vielfalt .card .vielfalt-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#vielfalt .card .card-description {
+  position: absolute;
+  bottom: -10%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: fit-content;
+  padding: 20px 30px;
+  background-color: #FEDF17;
+  border: 2px solid white;
+  border-radius: 50px;
+}
+
+#vielfalt .card .card-description p {
+  margin: 0;
+}
+
+#vielfalt .vielfalt-wave-top {
+  position: absolute;
+  top: -226px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/* End Vielfalt */
