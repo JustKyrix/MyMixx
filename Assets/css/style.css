@@ -15,6 +15,10 @@
   font-display: swap;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
   margin: 0;
