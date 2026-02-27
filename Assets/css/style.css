@@ -323,6 +323,10 @@ ul, ol {
     border: 2px solid white;
 }
 
+button {
+  font-family: 'Londrina', sans-serif;
+}
+
 .primary-btn {
     font-size: 45px;
     display: flex;
@@ -818,6 +822,7 @@ a {
   background-color: var(--primary);
   border-radius: 50px;
   text-align: center;
+  padding: 20px 0 20px 0;
 }
 
 #configurator .configurator-description {
@@ -825,9 +830,8 @@ a {
 }
 
 #configurator .konfigurator-controls {
-  background-color: var(--accent);
+  position: relative;
   width: 100%;
-  border-radius: 0 0 50px 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -836,6 +840,7 @@ a {
 }
 
 #configurator .konfigurator-btn-wrapper {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -843,9 +848,12 @@ a {
   gap: 10px;
   align-items: center;
   background-color: #B8CF63;
-  width: 100%;
+  width: 130px;
   height: 100%;
-  border-radius: 0 0 0 50px;
+  z-index: 2;
+  left: -10px;
+  bottom: 0;
+  border-radius: 20px;
 }
 
 #configurator .konfigurator-price-wrapper {
@@ -853,9 +861,19 @@ a {
   height: 100%;
   font-size: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  padding: 10px;
+  padding: 10px 30px 10px 10px;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--accent);
+  right: -10px;
+  bottom: 0;
+  border-radius: 20px;
+}
+
+#configurator .konfigurator-price {
+  font-size: 25px;
 }
 
 #configurator .konfigurator-btn-minus, .konfigurator-btn-plus {
@@ -869,7 +887,7 @@ a {
 
 #configurator .konfigurator-img {
   width: 100%;
-  height: 100px;
+  height: 130px;
   object-fit: contain;
 }
 
@@ -879,5 +897,11 @@ a {
 
 #configurator .konfigurator-panel.active {
     display: block; /* or flex/grid, whatever you're using for the wrapper */
+}
+
+#configurator .konfigurator-description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 /* End Konfigurator */
