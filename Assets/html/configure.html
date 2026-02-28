@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <nav class="navbar" id="navbar">
+    <nav class="navbar animate-in" id="navbar">
         <img src="../images/waves/nav-wave.svg" alt="Navbar Wave" class="nav-wave">
         <div class="nav-container">
             <button class="navbar-toggle" aria-label="Toggle navigation">
@@ -24,7 +24,12 @@
                     <li><a href="#" class="nav-link">Nachhaltigkeit</a></li>
                     <li><a href="#" class="nav-link">Kontakt</a></li>
                     <li><a href="#" class="nav-link icon-btn"><i class="fa-regular fa-heart"></i></a></li>
-                    <li><a href="#" class="nav-link icon-btn"><i class="fa-solid fa-bowl-rice"></i></a></li>
+                    <li>
+                        <a href="#" class="nav-link icon-btn" id="cart-open-btn">
+                            <i class="fa-solid fa-bowl-rice"></i>
+                            <span id="cart-badge" class="cart-badge" style="display:none;">0</span>
+                        </a>
+                    </li>
                     <li><a href="#" class="nav-link secondary-btn">Hilfe</a></li>
                 </ul>
             </div>
@@ -32,1058 +37,1038 @@
     </nav>
 
     <section id="hero-config">
-        <div class="container d-flex flex-column gap-25 justify-content-center align-items-center h-100 text-center">
+        <div class="container d-flex flex-column gap-25 justify-content-center align-items-center h-100 text-center text-uppercase">
             <a href="../../index.html"><img src="../images/logo/hero-logo.png" alt="Logo" class="logo"></a>
-            <h1 class="w-lg-75 w-100">JETZT EINMISCHEN</h1>
-            <p class="w-lg-25 w-100">UNSER KONFIGURATOR BIETET ÜBER 100 VERSCHIEDENE KOMBINATIONEN FÜR DEINE SELBSTKREIRTEN CORNFLAKES</p>
+            <h1 class="w-lg-75 w-100">Jetzt einmischen</h1>
+            <p class="w-lg-25 w-100">Unser Konfigurator bietet über 100 verschiedene Kombinationen für deine selbstkreierten Cornflakes.</p>
         </div>
         <img src="../images/waves/hero-wave-top.png" alt="Wave Top" class="hero-wave-top">
     </section>
 
     <section id="configurator">
         <div class="container d-flex flex-column gap-8 text-uppercase">
-            <div class="konfigurator-tabs">
-                <button class="konfigurator-tab" data-tab="cerealien">Cerealien</button>
-                <button class="konfigurator-tab active" data-tab="fruechte">Getrocknete Früchte</button>
-                <button class="konfigurator-tab" data-tab="nuesse">Nüsse & Samen</button>
-                <button class="konfigurator-tab" data-tab="superfoods">Superfoods</button>
-                <button class="konfigurator-tab" data-tab="extras">Extras</button>
-                <button class="konfigurator-tab" data-tab="fluessigkeiten">Flüssigkeiten</button>
+            <div class="configurator-tabs">
+                <button class="configurator-tab" data-tab="cereals">Cerealien</button>
+                <button class="configurator-tab active" data-tab="fruits">Getrocknete Früchte</button>
+                <button class="configurator-tab" data-tab="nuts">Nüsse & Samen</button>
+                <button class="configurator-tab" data-tab="superfoods">Superfoods</button>
+                <button class="configurator-tab" data-tab="extras">Extras</button>
+                <button class="configurator-tab" data-tab="liquids">Flüssigkeiten</button>
             </div>
 
-            <div class="konfigurator-panel" data-panel="cerealien">
-                <div class="konfigurator-wrapper">
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/zarte-haferflocken.png" alt="Zarte Haferflocken">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+            <div class="configurator-panel" data-panel="cereals">
+                <div class="configurator-wrapper">
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/zarte-haferflocken.png" alt="Zarte Haferflocken">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€0,50</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Zarte Haferflocken</span>
-                            <span class="konfigurator-amount">100g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/grobe-haferflocken.png" alt="Großblättrige Haferflocken">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€0,70</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€0,50</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Große Haferflocken</span>
-                            <span class="konfigurator-amount">100g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Zarte Haferflocken</span>
+                            <span class="configurator-amount">100g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/dinkelflocken.png" alt="Dinkelflocken">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/grobe-haferflocken.png" alt="Großblättrige Haferflocken">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,20</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Dinkelflocken</span>
-                            <span class="konfigurator-amount">100g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/quinoaflocken.png" alt="Quinoaflocken">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€0,70</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Quinoaflocken</span>
-                            <span class="konfigurator-amount">100g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Große Haferflocken</span>
+                            <span class="configurator-amount">100g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/buchweizenflocken.png" alt="Buchweizenflocken">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/dinkelflocken.png" alt="Dinkelflocken">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,20</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Buchweizenflocken</span>
-                            <span class="konfigurator-amount">100g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/hirseflocken.png" alt="Hirseflocken">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,80</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,20</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Hirseflocken</span>
-                            <span class="konfigurator-amount">100g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Dinkelflocken</span>
+                            <span class="configurator-amount">100g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/vollkorn-reisflocken.png" alt="Vollkorn-Reisflocken">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/quinoaflocken.png" alt="Quinoaflocken">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,90</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Vollkorn-Reisflocken</span>
-                            <span class="konfigurator-amount">100g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/amaranth-pops.png" alt="Amaranth-Pops">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,20</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Amaranth-Pops</span>
-                            <span class="konfigurator-amount">50g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Quinoaflocken</span>
+                            <span class="configurator-amount">100g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/cornflakes-mit-honig.png" alt="Cornflakes">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/buchweizenflocken.png" alt="Buchweizenflocken">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Cornflakes</span>
-                            <span class="konfigurator-amount">50g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/crunchy-müsli.png" alt="Crunchy Müsli">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€2,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,20</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Crunchy Müsli</span>
-                            <span class="konfigurator-amount">150g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Buchweizenflocken</span>
+                            <span class="configurator-amount">100g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/rice-krispies.png" alt="Rice Krispies">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/hirseflocken.png" alt="Hirseflocken">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,80</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Rice Krispies</span>
-                            <span class="konfigurator-amount">75g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/weizenkleie.png" alt="Weizenkleie">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,80</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Weizenkleie</span>
-                            <span class="konfigurator-amount">50g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Hirseflocken</span>
+                            <span class="configurator-amount">100g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/cerealien/geroestete-haferflakes.png" alt="Geröstete Haferflakes">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/vollkorn-reisflocken.png" alt="Vollkorn-Reisflocken">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,20</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,90</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Geröstete Haferflakes</span>
-                            <span class="konfigurator-amount">30g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Vollkorn-Reisflocken</span>
+                            <span class="configurator-amount">100g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/amaranth-pops.png" alt="Amaranth-Pops">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,20</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Amaranth-Pops</span>
+                            <span class="configurator-amount">50g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/cornflakes-mit-honig.png" alt="Cornflakes">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Cornflakes</span>
+                            <span class="configurator-amount">50g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/crunchy-müsli.png" alt="Crunchy Müsli">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€2,50</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Crunchy Müsli</span>
+                            <span class="configurator-amount">150g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/rice-krispies.png" alt="Rice Krispies">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,80</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Rice Krispies</span>
+                            <span class="configurator-amount">75g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/weizenkleie.png" alt="Weizenkleie">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Weizenkleie</span>
+                            <span class="configurator-amount">50g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/cerealien/geroestete-haferflakes.png" alt="Geröstete Haferflakes">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,20</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Geröstete Haferflakes</span>
+                            <span class="configurator-amount">30g</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="konfigurator-panel active" data-panel="fruechte">
-                <div class="konfigurator-wrapper">
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/getrocknete-fruechte/cranberries.png" alt="Cranberries">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+            <div class="configurator-panel active" data-panel="fruits">
+                <div class="configurator-wrapper">
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/getrocknete-fruechte/cranberries.png" alt="Cranberries">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,40</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Cranberries</span>
-                            <span class="konfigurator-amount">25g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/getrocknete-fruechte/rosinen.png" alt="Rosinen">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,10</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,40</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Rosinen</span>
-                            <span class="konfigurator-amount">25g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Cranberries</span>
+                            <span class="configurator-amount">25g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/getrocknete-fruechte/goji-beeren.png" alt="Goji-Beeren">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/getrocknete-fruechte/rosinen.png" alt="Rosinen">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,60</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Goji-Beeren</span>
-                            <span class="konfigurator-amount">20g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/getrocknete-fruechte/mangostuecke.png" alt="Mangostückchen">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,10</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Mangostückchen</span>
-                            <span class="konfigurator-amount">40g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Rosinen</span>
+                            <span class="configurator-amount">25g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/getrocknete-fruechte/apfelringe.png" alt="Apfelringe">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/getrocknete-fruechte/goji-beeren.png" alt="Goji-Beeren">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Apfelringe</span>
-                            <span class="konfigurator-amount">10g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/getrocknete-fruechte/bananenchips.png" alt="Bananenchips">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,80</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,60</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Bananenchips</span>
-                            <span class="konfigurator-amount">20g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Goji-Beeren</span>
+                            <span class="configurator-amount">20g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/getrocknete-fruechte/datteln.png" alt="Datteln">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/getrocknete-fruechte/mangostuecke.png" alt="Mangostückchen">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,20</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Datteln</span>
-                            <span class="konfigurator-amount">20g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/getrocknete-fruechte/feigen.png" alt="Feigen">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Feigen</span>
-                            <span class="konfigurator-amount">20g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Mangostückchen</span>
+                            <span class="configurator-amount">40g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/getrocknete-fruechte/erdbeerenscheiben.png" alt="Erdbeerscheiben">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/getrocknete-fruechte/apfelringe.png" alt="Apfelringe">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,40</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Erdbeerscheiben</span>
-                            <span class="konfigurator-amount">10g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Apfelringe</span>
+                            <span class="configurator-amount">10g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/getrocknete-fruechte/heidelbeeren.png" alt="Heidelbeeren">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/getrocknete-fruechte/bananenchips.png" alt="Bananenchips">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,30</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,80</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Heidelbeeren</span>
-                            <span class="konfigurator-amount">15g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Bananenchips</span>
+                            <span class="configurator-amount">20g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/getrocknete-fruechte/datteln.png" alt="Datteln">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,20</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Datteln</span>
+                            <span class="configurator-amount">20g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/getrocknete-fruechte/feigen.png" alt="Feigen">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Feigen</span>
+                            <span class="configurator-amount">20g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/getrocknete-fruechte/erdbeerenscheiben.png" alt="Erdbeerscheiben">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,40</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Erdbeerscheiben</span>
+                            <span class="configurator-amount">10g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/getrocknete-fruechte/heidelbeeren.png" alt="Heidelbeeren">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,30</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Heidelbeeren</span>
+                            <span class="configurator-amount">15g</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="konfigurator-panel" data-panel="nuesse">
-                <div class="konfigurator-wrapper">
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/nuesse/mandeln.png" alt="Mandeln">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+            <div class="configurator-panel" data-panel="nuts">
+                <div class="configurator-wrapper">
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/nuesse/mandeln.png" alt="Mandeln">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,00</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Mandeln</span>
-                            <span class="konfigurator-amount">15g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/nuesse/walnüsse.png" alt="Walnüsse">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,00</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Walnüsse</span>
-                            <span class="konfigurator-amount">15g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Mandeln</span>
+                            <span class="configurator-amount">15g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/nuesse/haselnüsse.png" alt="Haselnüsse">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/nuesse/walnüsse.png" alt="Walnüsse">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,20</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Haselnüsse</span>
-                            <span class="konfigurator-amount">15g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/nuesse/cashewkerne.png" alt="Cashewkerne">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€2,80</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Cashewkerne</span>
-                            <span class="konfigurator-amount">15g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Walnüsse</span>
+                            <span class="configurator-amount">15g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/nuesse/pekanüsse.png" alt="Pekanüsse">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/nuesse/haselnüsse.png" alt="Haselnüsse">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,00</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Pekanüsse</span>
-                            <span class="konfigurator-amount">15g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/nuesse/sonnenblumenkerne.png" alt="Sonnenblumenkerne">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,20</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Sonnenblumenkerne</span>
-                            <span class="konfigurator-amount">20g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Haselnüsse</span>
+                            <span class="configurator-amount">15g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/nuesse/kürbiskerne.png" alt="Kürbiskerne">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/nuesse/cashewkerne.png" alt="Cashewkerne">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Kürbiskerne</span>
-                            <span class="konfigurator-amount">15g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/nuesse/chiasamen.png" alt="Chiasamen">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€2,80</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Chiasamen</span>
-                            <span class="konfigurator-amount">10g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Cashewkerne</span>
+                            <span class="configurator-amount">15g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/nuesse/leinsamen.png" alt="Leinsamen">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/nuesse/pekanüsse.png" alt="Pekanüsse">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€2,50</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Leinsamen</span>
-                            <span class="konfigurator-amount">20g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/nuesse/hanfsamen.png" alt="Hanfsamen">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,00</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,00</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Hanfsamen</span>
-                            <span class="konfigurator-amount">10g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Pekanüsse</span>
+                            <span class="configurator-amount">15g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/nuesse/sesamsamen.png" alt="Sesamsamen">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/nuesse/sonnenblumenkerne.png" alt="Sonnenblumenkerne">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,80</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Sesamsamen</span>
-                            <span class="konfigurator-amount">20g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Sonnenblumenkerne</span>
+                            <span class="configurator-amount">20g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/nuesse/kürbiskerne.png" alt="Kürbiskerne">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Kürbiskerne</span>
+                            <span class="configurator-amount">15g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/nuesse/chiasamen.png" alt="Chiasamen">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Chiasamen</span>
+                            <span class="configurator-amount">10g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/nuesse/leinsamen.png" alt="Leinsamen">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€2,50</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Leinsamen</span>
+                            <span class="configurator-amount">20g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/nuesse/hanfsamen.png" alt="Hanfsamen">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,00</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Hanfsamen</span>
+                            <span class="configurator-amount">10g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/nuesse/sesamsamen.png" alt="Sesamsamen">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,80</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Sesamsamen</span>
+                            <span class="configurator-amount">20g</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="konfigurator-panel" data-panel="superfoods">
-                <div class="konfigurator-wrapper">
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/superfoods/kakaonibs.png" alt="Kakaonibs">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+            <div class="configurator-panel" data-panel="superfoods">
+                <div class="configurator-wrapper">
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/superfoods/kakaonibs.png" alt="Kakaonibs">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Kakaonibs</span>
-                            <span class="konfigurator-amount">10g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/superfoods/matcha.png" alt="Matcha-Pulver">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€2,00</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Matcha-Pulver</span>
-                            <span class="konfigurator-amount">5g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Kakaonibs</span>
+                            <span class="configurator-amount">10g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/superfoods/spirulina.png" alt="Spirulina">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/superfoods/matcha.png" alt="Matcha-Pulver">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€2,30</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Spirulina</span>
-                            <span class="konfigurator-amount">5g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/superfoods/acai-beeren.png" alt="Acai-Beeren">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€2,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€2,00</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Acai-Beeren</span>
-                            <span class="konfigurator-amount">10g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Matcha-Pulver</span>
+                            <span class="configurator-amount">5g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/superfoods/goji.png" alt="Gojipulver">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/superfoods/spirulina.png" alt="Spirulina">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€2,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€2,30</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Gojipulver</span>
-                            <span class="konfigurator-amount">10g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Spirulina</span>
+                            <span class="configurator-amount">5g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/superfoods/kokosflocken.png" alt="Kokosflocken">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/superfoods/acai-beeren.png" alt="Acai-Beeren">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€2,50</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Kokosflocken</span>
-                            <span class="konfigurator-amount">20g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Acai-Beeren</span>
+                            <span class="configurator-amount">10g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/superfoods/goji.png" alt="Gojipulver">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€2,50</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Gojipulver</span>
+                            <span class="configurator-amount">10g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/superfoods/kokosflocken.png" alt="Kokosflocken">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Kokosflocken</span>
+                            <span class="configurator-amount">20g</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="konfigurator-panel" data-panel="extras">
-                <div class="konfigurator-wrapper">
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/extras/dunkle-schokolade.png" alt="Dunkle Schokoladenstücke">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+            <div class="configurator-panel" data-panel="extras">
+                <div class="configurator-wrapper">
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/extras/dunkle-schokolade.png" alt="Dunkle Schokoladenstücke">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,80</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Schokoladenstücke</span>
-                            <span class="konfigurator-amount">15g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/extras/weisse-schokolade.png" alt="Weiße Schokoladenstücke">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,60</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,80</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Schokoladenstücke</span>
-                            <span class="konfigurator-amount">15g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Schokoladenstücke</span>
+                            <span class="configurator-amount">15g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/extras/karamell.png" alt="Karamellstückchen">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/extras/weisse-schokolade.png" alt="Weiße Schokoladenstücke">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€2,00</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Karamellstückchen</span>
-                            <span class="konfigurator-amount">15g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/extras/kokoschips.png" alt="Kokoschips">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€3,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,60</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Kokoschips</span>
-                            <span class="konfigurator-amount">150g</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Weiße Schokoladenstücke</span>
+                            <span class="configurator-amount">15g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/extras/honig.png" alt="Honig">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/extras/karamell.png" alt="Karamellstückchen">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€2,00</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Honig</span>
-                            <span class="konfigurator-amount">25g</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/extras/ahornsirup.png" alt="Ahornsirup">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€2,00</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€2,00</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Ahornsirup</span>
-                            <span class="konfigurator-amount">25ml</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Karamellstückchen</span>
+                            <span class="configurator-amount">15g</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/extras/agavendicksaft.png" alt="Agavendicksaft">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/extras/kokoschips.png" alt="Kokoschips">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,50</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€3,50</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Agavendicksaft</span>
-                            <span class="konfigurator-amount">25ml</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Kokoschips</span>
+                            <span class="configurator-amount">150g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/extras/honig.png" alt="Honig">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€2,00</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Honig</span>
+                            <span class="configurator-amount">25g</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/extras/ahornsirup.png" alt="Ahornsirup">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€2,00</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Ahornsirup</span>
+                            <span class="configurator-amount">25ml</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/extras/agavendicksaft.png" alt="Agavendicksaft">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,50</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Agavendicksaft</span>
+                            <span class="configurator-amount">25ml</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="konfigurator-panel" data-panel="fluessigkeiten">
-                <div class="konfigurator-wrapper">
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten1.png" alt="Hafermilch">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+            <div class="configurator-panel" data-panel="liquids">
+                <div class="configurator-wrapper">
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten1.png" alt="Hafermilch">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€0,85</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Hafermilch</span>
-                            <span class="konfigurator-amount">200ml</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten2.png" alt="Mandelmilch">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,25</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€0,85</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Mandelmilch</span>
-                            <span class="konfigurator-amount">200ml</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Hafermilch</span>
+                            <span class="configurator-amount">200ml</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten3.png" alt="Kokosmilch">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten2.png" alt="Mandelmilch">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,25</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Kokosmilch</span>
-                            <span class="konfigurator-amount">200ml</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten4.png" alt="Sojamilch">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,20</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,25</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Sojamilch</span>
-                            <span class="konfigurator-amount">200ml</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Mandelmilch</span>
+                            <span class="configurator-amount">200ml</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten5.png" alt="Reismilch">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten3.png" alt="Kokosmilch">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€0,85</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Reismilch</span>
-                            <span class="konfigurator-amount">200ml</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten6.png" alt="Vollmilch Bio">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,25</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,25</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Vollmilch (Bio)</span>
-                            <span class="konfigurator-amount">200ml</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Kokosmilch</span>
+                            <span class="configurator-amount">200ml</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten7.png" alt="Joghurt">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten4.png" alt="Sojamilch">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€0,95</span>
-                            </div>
-                        </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Joghurt</span>
-                            <span class="konfigurator-amount">25ml</span>
-                        </div>
-                    </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten8.png" alt="Wasser">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€0,85</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,20</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Wasser</span>
-                            <span class="konfigurator-amount">200ml</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Sojamilch</span>
+                            <span class="configurator-amount">200ml</span>
                         </div>
                     </div>
-
-                    <div class="konfigurator-card">
-                        <img class="konfigurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten9.png" alt="Kokoswasser">
-                        <div class="konfigurator-controls">
-                            <div class="konfigurator-btn-wrapper">
-                                <button class="konfigurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
-                                <span class="konfigurator-quantity">0</span>
-                                <button class="konfigurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten5.png" alt="Reismilch">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
                             </div>
-                            <div class="konfigurator-price-wrapper">
-                                <span class="konfigurator-price">€1,05</span>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€0,85</span>
                             </div>
                         </div>
-                        <div class="konfigurator-description">
-                            <span class="konfigurator-name">Kokoswasser</span>
-                            <span class="konfigurator-amount">200ml</span>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Reismilch</span>
+                            <span class="configurator-amount">200ml</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten6.png" alt="Vollmilch Bio">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,25</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Vollmilch (Bio)</span>
+                            <span class="configurator-amount">200ml</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten7.png" alt="Joghurt">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€0,95</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Joghurt</span>
+                            <span class="configurator-amount">25ml</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten8.png" alt="Wasser">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€0,85</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Wasser</span>
+                            <span class="configurator-amount">200ml</span>
+                        </div>
+                    </div>
+                    <div class="configurator-card">
+                        <img class="configurator-img" src="../images/früchte/fluessigkeiten/fluessigkeiten9.png" alt="Kokoswasser">
+                        <div class="configurator-controls">
+                            <div class="configurator-btn-wrapper">
+                                <button class="configurator-btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                <span class="configurator-quantity">0</span>
+                                <button class="configurator-btn-plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="configurator-price-wrapper">
+                                <span class="configurator-price">€1,05</span>
+                            </div>
+                        </div>
+                        <div class="configurator-description">
+                            <span class="configurator-name">Kokoswasser</span>
+                            <span class="configurator-amount">200ml</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="modal-overlay" id="cart-modal">
+        <div class="modal cart-modal">
+            <div class="modal-header">
+                <h2>Warenkorb</h2>
+                <button class="modal-close" id="cart-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="cart-items"></div>
+            <div class="modal-footer">
+                <div class="cart-total">
+                    <p class="cart-total-label">Gesamt</p>
+                    <p class="cart-total-price" id="cart-total-price">€0,00</p>
+                </div>
+                <button class="cart-checkout-btn">Jetzt bezahlen</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="error-modal">
+        <div class="modal error-modal">
+            <div class="modal-header">
+                <h2>Hinweis</h2>
+                <button class="modal-close" id="error-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Die Menge kann nicht unter 0 sein.</p>
+            </div>
+        </div>
+    </div>
+
     <script src="../scripts/scripts.js"></script>
     <script src="../scripts/configurator.js"></script>
 </body>

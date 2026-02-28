@@ -5,11 +5,10 @@ const h1 = document.querySelector('h1');
 const breakpoint = window.matchMedia('(max-width: 991px)');
 const body = document.querySelector('body');
 
-
 toggle.addEventListener('click', () => {
   toggle.classList.toggle('open');
   collapse.classList.toggle('open');
-  nav.classList.toggle('nav-bg'); 
+  nav.classList.toggle('nav-bg');
 
   if (collapse.classList.contains('open')) {
     body.style.overflow = 'hidden';
@@ -28,10 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Listen for changes
   breakpoint.addEventListener('change', handleBreakpoint);
-
-  // Run once on load
   handleBreakpoint(breakpoint);
 
   window.addEventListener('scroll', function() {
