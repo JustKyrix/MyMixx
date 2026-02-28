@@ -126,7 +126,8 @@ const cartTotalEl   = document.getElementById('cart-total-price');
 const cartOpenBtn   = document.getElementById('cart-open-btn');
 const cartCloseBtn  = document.getElementById('cart-close-btn');
 
-cartOpenBtn.addEventListener('click', () => {
+cartOpenBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     renderCart();
     cartModal.classList.add('open');
     document.body.style.overflow = 'hidden';
