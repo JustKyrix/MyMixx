@@ -701,7 +701,7 @@ a {
   background-color: white;
 }
 
-#variety .card-wrapper {
+.card-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
@@ -711,23 +711,23 @@ a {
 }
 
 @media (max-width: 991px) {
-  #variety .card-wrapper {
+  .card-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 767px) {
-  #variety .card-wrapper {
+  .card-wrapper {
     grid-template-columns: auto;
     gap: 100px;
   }
-  #variety .card .card-description {
+  .card .card-description {
     width: 200px!important;
     left: 20%!important;
   }
 }
 
-#variety .card {
+.card {
   width: 390px;
   height: 390px;
   border-radius: 100px;
@@ -736,13 +736,13 @@ a {
   position: relative;
 }
 
-#variety .card .variety-img {
+.card .variety-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-#variety .card .card-description {
+.card .card-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -755,7 +755,7 @@ a {
   font-size: 30px;
 }
 
-#variety .card .card-description p {
+.card .card-description p {
   margin: 0;
 }
 
@@ -1008,6 +1008,18 @@ a {
   align-items: center;
 }
 
+#configurator .configurator-tabs:has(.configurator-tab:first-child.active) {
+    padding-left: 0;
+}
+
+#configurator .configurator-tabs:has(.configurator-tab:last-child.active) {
+    padding-right: 0;
+}
+
+#configurator .configurator-tab.active .configurator-tabs {
+  padding: 0;
+}
+
 @media (max-width: 991px) {
   #configurator .configurator-tabs {
     gap: 20px;
@@ -1068,7 +1080,7 @@ a {
   background-color: var(--primary);
   border-radius: 50px;
   text-align: center;
-  padding: 20px 0 20px 0;
+  padding: 10px 0 10px 0;
 }
 
 #configurator .configurator-description {
@@ -1076,6 +1088,10 @@ a {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+#configurator .configurator-amount {
+  font: 16px;
 }
 
 #configurator .configurator-controls {
@@ -1149,6 +1165,75 @@ a {
     display: block;
 }
 /* End Configurator */
+
+/* Start Finished Products */
+#finishedProducts {
+  position: relative;
+  background-color: var(--primary);
+  height: 120vh;
+  padding: 80px 0 0 0;
+}
+
+#finishedProducts .finished-top-wave {
+  position: absolute;
+  top: -170px;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+#finishedProducts .finished-flake-top {
+  position: absolute;
+  top: 68px;
+  left: 155px;
+}
+
+#finishedProducts p {
+  font-size: 25px;
+}
+
+#finishedProducts .finished-flake-bottom {
+  position: absolute;
+  bottom: 150px;
+  right: 50px;
+  width: 25%;
+  height: auto;
+  z-index: 1;
+}
+
+#finishedProducts .finished-bottom-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/* End Finished Products */
+
+/* Start Design */
+#design {
+  position: relative;
+  background-color: white;
+}
+
+#design .card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#design .variety-img {
+  width: 90%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+#design .card-description {
+  margin-top: -45px;
+}
+/* End Design */
 
 /* Start Cart */
 .cart-badge {

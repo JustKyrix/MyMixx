@@ -22,7 +22,12 @@
                     <li><a href="#" class="nav-link">Nachhaltigkeit</a></li>
                     <li><a href="#" class="nav-link">Kontakt</a></li>
                     <li><a href="#" class="nav-link icon-btn"><i class="fa-regular fa-heart"></i></a></li>
-                    <li><a href="#" class="nav-link icon-btn"><i class="fa-solid fa-bowl-rice"></i></a></li>
+                    <li>
+                        <a href="#" class="nav-link icon-btn" id="cart-open-btn">
+                            <i class="fa-solid fa-bowl-rice"></i>
+                            <span id="cart-badge" class="cart-badge" style="display:none;">0</span>
+                        </a>
+                    </li>
                     <li><a href="#" class="nav-link secondary-btn">Hilfe</a></li>
                 </ul>
             </div>
@@ -190,6 +195,37 @@
             </div>
         </div>
     </section>
+    
+    <div class="modal-overlay" id="cart-modal">
+        <div class="modal cart-modal">
+            <div class="modal-header">
+                <h2>Warenkorb</h2>
+                <button class="modal-close" id="cart-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="cart-items"></div>
+            <div class="modal-footer">
+                <div class="cart-total">
+                    <p class="cart-total-label">Gesamt</p>
+                    <p class="cart-total-price" id="cart-total-price">€0,00</p>
+                </div>
+                <button class="cart-checkout-btn">Jetzt bezahlen</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="error-modal">
+        <div class="modal error-modal">
+            <div class="modal-header">
+                <h2>Hinweis</h2>
+                <button class="modal-close" id="error-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Die Menge kann nicht unter 0 sein.</p>
+            </div>
+        </div>
+    </div>
+
     <script src="./Assets/scripts/scripts.js"></script>
+    <script src="./Assets/scripts/configurator.js"></script>
 </body>
 </html>
