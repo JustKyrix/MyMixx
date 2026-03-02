@@ -28,15 +28,27 @@ function formatPrice(num) {
 }
 
 function updateCartBadge() {
-    const badge = document.getElementById('cart-badge');
-    if (!badge) return;
     const total = getTotalItems();
-    if (total > 0) {
-        badge.textContent = total;
-        badge.style.display = 'flex';
-    } else {
-        badge.style.display = 'none';
-    }
+    document.querySelectorAll('.cart-badge').forEach(badge => {
+        if (total > 0) {
+            badge.textContent = total;
+            badge.style.display = 'flex';
+        } else {
+            badge.style.display = 'none';
+        }
+    });
+}
+
+const cartOpenBtnDesktop = document.getElementById('cart-open-btn-desktop');
+
+if (cartOpenBtnDesktop) {
+    cartOpenBtnDesktop.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        renderCart();
+        cartModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
 }
 
 function syncCardQuantity(id, value) {

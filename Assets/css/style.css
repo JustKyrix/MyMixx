@@ -475,11 +475,11 @@ button {
 }
 
 .navbar-nav li {
-  list-style: none;
+    list-style: none;
 }
 
 .nav-container {
-  margin-right: 40px;
+    margin-right: 40px;
 }
 
 .nav-bg {
@@ -496,8 +496,8 @@ button {
 }
 
 .navbar-animate-in {
-  opacity: 0;
-  animation: fadeIn .5s ease forwards;
+    opacity: 0;
+    animation: fadeIn .5s ease forwards;
 }
 
 .navbar.sticky {
@@ -524,6 +524,7 @@ button {
     z-index: -1;
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 .navbar-nav {
@@ -543,32 +544,93 @@ a {
 }
 
 @media (max-width: 991px) {
-  .navbar-collapse {
-    display: none;
-  }
+    .navbar-collapse {
+        display: none;
+    }
 
-  .navbar-collapse.open {
-    display: block;
-    height: 70vh;
-  }
+    .navbar-collapse.open {
+        display: block;
+        height: 70vh;
+    }
 
-  .navbar-collapse.open .navbar-nav {
-    flex-direction: column;
-  }
+    .navbar-collapse.open .navbar-nav {
+        flex-direction: column;
+    }
 
-  .navbar-toggle {
-    display: flex;
-  }
+    .navbar-toggle {
+        display: flex;
+    }
 }
 
 @media (min-width: 991px) {
-  .navbar-toggle {
-    display: none;
-  }
+    .navbar-toggle {
+        display: none;
+    }
 
-  .navbar-collapse {
-    display: block !important;
-  }
+    .navbar-collapse {
+        display: block !important;
+    }
+}
+
+.nav-cart-mobile {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .nav-cart-mobile {
+        display: flex;
+    }
+
+    .cart-desktop-only {
+        display: none;
+    }
+
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .navbar-toggle {
+        width: auto;
+        order: 1;
+    }
+
+    .nav-cart-mobile {
+        order: 2;
+    }
+
+    .navbar-collapse {
+        order: 3;
+        width: 100%;
+    }
+    
+    .navbar-collapse.open .cart-desktop-only {
+      display: block;
+    }
+
+    .navbar-collapse.open .icon-btn {
+      background-color: white;
+      border: 2px solid transparent;
+    }
+
+    .navbar-collapse.open .icon-btn:hover {
+      background-color: var(--accent);
+      border: 2px solid white;
+    }
+
+    .navbar-collapse.open .secondary-btn {
+      background-color: white;
+      border: 2px solid transparent;
+    }
+
+    .navbar-collapse.open .secondary-btn:hover {
+      background-color: var(--accent);
+      border: 2px solid white;
+    }
 }
 /* End Nav */
 
@@ -1699,7 +1761,7 @@ a {
 .cart-modal {
   width: 100%;
   height: 100%;
-  max-width: 50vw;
+  max-width: 90vw;
   max-height: 50vh;
   display: flex;
   flex-direction: column;
