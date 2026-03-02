@@ -14,11 +14,15 @@ toggle.addEventListener('click', () => {
     const icon = toggle.querySelector('i');
     if (collapse.classList.contains('open')) {
         body.style.overflow = 'hidden';
+        body.style.position = 'fixed';
+        body.style.width = '100%';
         if (navCartMobile) navCartMobile.style.display = 'none';
         icon.className = 'fa-solid fa-x';
     } else {
         body.style.overflow = 'initial';
         body.style.overflowX = 'hidden';
+        body.style.position = '';
+        body.style.width = '';
         if (navCartMobile) navCartMobile.style.removeProperty('display');
         icon.className = 'fa-solid fa-bars';
     }

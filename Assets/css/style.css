@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
   font-family: 'Londrina', sans-serif;
   font-size: 20px;
