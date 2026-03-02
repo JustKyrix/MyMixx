@@ -16,11 +16,11 @@
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   margin: 0;
   font-family: 'Londrina', sans-serif;
   font-size: 20px;
@@ -548,6 +548,13 @@ a {
         display: none;
     }
 
+    .nav-wave {
+      width: 100%;
+      height: 100%!important;
+      object-fit: none!important;
+      object-position: 90% 90%;
+    }
+
     .navbar-collapse.open {
         display: block;
         height: 70vh;
@@ -896,7 +903,7 @@ a {
 
 #variety .variety-flake {
   position: absolute;
-  right: 10%;
+  right: 15%;
   top: -12%;
 }
 
@@ -1097,7 +1104,7 @@ a {
 
 #breakfastCta .breakfast-flake-top {
     position: absolute;
-    top: -45%;
+    top: -40%;
     right: 10%;
     width: 220px;
     height: auto;
@@ -1172,7 +1179,7 @@ a {
 
 #breakfastCta .breakfast-flake-bottom {
     position: absolute;
-    bottom: -174px;
+    bottom: -53%;
     left: 250px;
     width: 310px;
     z-index: 3;
@@ -1242,9 +1249,16 @@ a {
 
 #footerLegal {
   padding: 20px 0;
+  margin-top: 100px;
   background: var(--primary);
   position: relative;
   z-index: 7;
+}
+
+@media (max-width: 1200px) {
+  #footerLegal {
+    margin-top: 0!important;
+  }
 }
 
 #footerLegal .socialmedia {
@@ -1260,6 +1274,11 @@ a {
 
 #footerLegal .footer-legal-item {
   color: white;
+}
+
+#footer-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 /* End footer */
 
@@ -1565,8 +1584,8 @@ a {
 
 #finishedProducts .finished-flake-top {
   position: absolute;
-  top: 68px;
-  left: 155px;
+  top: 10.5%;
+  left: 10%;
 }
 
 #finishedProducts p {
@@ -1575,8 +1594,8 @@ a {
 
 #finishedProducts .finished-flake-bottom {
   position: absolute;
-  bottom: 150px;
-  right: 50px;
+  bottom: 175px;
+  right: 60px;
   width: 25%;
   height: auto;
   z-index: 1;
@@ -1704,8 +1723,8 @@ a {
 
 #design .design-flake {
   position: absolute;
-  left: 55px;
-  bottom: -215px;
+  left: 70px;
+  bottom: -245px;
   width: 25%;
   height: auto;
   z-index: 3;
